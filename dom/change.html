@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="i"></h2>
+    <p></p>
+    <h1 class="a"></h1>
+    <img id="im" src="./flight-handsome-african-american-male-basketball-player-motion-action-neon-light-blue-wall.jpg" alt="" height="300px" width="300px">
+    <button onclick="clicks()">click</button>
+    <div id="bg" style="background-color: blueviolet; height: 100px; width: 100px;">hello</div>
+    <button onclick="change()">change</button>
+    <script>
+        document.getElementById("i").innerHTML="hello"
+        document.getElementsByTagName("p")[0].innerHTML="iiiii"
+        document.getElementsByClassName("a")[0].innerHTML="kkkkk"
+       
+        function clicks(){
+             document.getElementById("im").src="a.jpg"
+        }
+        function change(){
+             document.getElementById("bg").style.backgroundColor="red"
+        }
+    </script>
+</body>
+</html>
