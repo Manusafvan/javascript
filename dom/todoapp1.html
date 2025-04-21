@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+  <h2>Car List</h2>
+  <input type="text" id="carInput" placeholder="Enter car name">
+  <button onclick="addCar()">Add</button>
+
+  <ul id="car To Do App"></ul>
+
+  <script>
+    function addCar() {
+      let input = document.getElementById('carInput');
+      let car = input.value;
+
+      if (car === '') return;
+
+      let li = document.createElement('li');
+      li.textContent = car;
+
+      let btn = document.createElement('button');
+      btn.textContent = 'Delete';
+      btn.onclick = function() {
+        li.remove();
+      };
+
+      li.appendChild(btn);
+      document.getElementById('carList').appendChild(li);
+      input.value = '';
+    }
+  </script>
+
+</body>
+</html>

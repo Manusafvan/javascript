@@ -12,12 +12,27 @@
     <button onclick="change('blue')">Blue</button>
     <button onclick="change('red')">Red</button>
     <button onclick="change('black')">black</button>
+    <button onclick="create()">create</button>
+    <button onclick="add()"> Add</button>
     <script>
         
 
         function change(color){
             document.getElementById("colorbox").style.backgroundColor=color
         }
+function create(){
+    const para = document.createElement("p");
+const node = document.createTextNode("This is new.");
+para.appendChild(node);
+document.body.appendChild(para);
+}
+function add(){
+    const butto=document.createElement("button");
+    const content=document.createTextNode("Click me");
+    butto.appendChild(content);
+    document.body.appendChild(butto);
+}
+       
     </script>
     
 </body>
