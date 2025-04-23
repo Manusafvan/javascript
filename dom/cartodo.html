@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="background-color: cadetblue; width: 100%; height: 1000px; text-align: center; ">
+<h1>To do app</h1>
+<input type="text" id="typename">
+<button  id="Addcar" onclick="Addcar()">Submit</button>
+<script>
+function Addcar() {
+    let value=document.getElementById('typename').value
+           let para=document.createElement('p')
+           let del =document.createElement('button')
+           let deltext=document.createTextNode('delete')
+           del.appendChild(deltext)
+           para.appendChild(del)
+           let text=document.createTextNode(value)
+           para.appendChild(text)
+           document.body.appendChild(para)
+           del.addEventListener('click',()=>{
+            para.remove()
+           })  
+}  
+</script>
+</div>
+</body>
+</html>
